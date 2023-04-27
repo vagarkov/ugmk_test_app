@@ -1,0 +1,15 @@
+.error-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.error-message {
+  color: #812;
+  line-height: 2rem;
+  font-weight: bold;
+}

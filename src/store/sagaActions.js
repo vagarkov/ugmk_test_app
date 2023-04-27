@@ -1,0 +1,4 @@
+export const sagaActions = {
+  FETCH_PRODUCTS: 'FETCH_PRODUCTS',
+  FETCH_PRODUCTS_FAILED: 'FETCH_PRODUCTS_FAILED',
+};
