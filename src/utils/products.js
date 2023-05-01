@@ -8,6 +8,7 @@ export const getDateTimestamp = date => {
 };
 
 export const getLabels = products => {
+  console.log('getLabels, products', products);
   const filteredProducts = products.filter(product => product.date);
   const productsSortedByDate = filteredProducts.sort(
     ({ date: dateA }, { date: dateB }) => {

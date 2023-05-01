@@ -1,5 +1,7 @@
 Стек: React, JavaScript, NodeJS Express
 
+Note: Исходя из условий задачи, я сделал все в рамках одного контейнера, но ,по-идее, надо бы разнести фронт и бэк в отдельные контейнеры <br />
+
 `npm install` - установлены все зависимости <br />
 `npm run start` - приложение запускается на локальной машине по адресу localhost:3000 <br />
 `npm run dockerize` - создаётся docker image c именем ugmk_test_app <br />

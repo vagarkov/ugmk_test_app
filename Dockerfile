@@ -1,26 +1,17 @@
-FROM node:16-alpine AS ui-build
+FROM node:16-alpine
 
-WORKDIR /usr/app/client/
-COPY package*.json ./
-RUN npm install
+WORKDIR /usr/app
+
 COPY src/ ./src
-COPY public/ ./public
-RUN npm run build
-
-FROM node:16-alpine AS server-build
-
-WORKDIR /usr/app/
-
-COPY --from=ui-build /usr/app/client/build/ ./client/build
-WORKDIR /usr/app/server/
-
-COPY package*.json ./
-RUN npm install
-
 COPY server.js ./
+COPY public/ ./public
+COPY data/ ./data
+COPY package*.json ./
 
-ENV NODE_ENV=production
+RUN npm install
+RUN npm run build
+RUN npm install -g serve
 
 EXPOSE 3000 3001
 
-CMD [ "node", "server.js" ]
+CMD ["sh", "-c", "npm run start:server & serve -n -s build -l 3000"]

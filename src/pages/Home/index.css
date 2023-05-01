@@ -30,7 +30,8 @@
 .bar-chart__border {
   padding: 25px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+  align-items: flex-end;
   border: 1px solid black;
   border-radius: 10px;
 }
